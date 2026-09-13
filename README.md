@@ -1,6 +1,5 @@
 # TypeScript Design Patterns
 
-[![skills.sh](https://skills.sh/b/fugisakimatheus/typescript-design-patterns)](https://skills.sh/fugisakimatheus/typescript-design-patterns)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A comprehensive catalog of the 22 classic **Gang of Four (GoF)** design patterns tailored for modern TypeScript. Formatted as an open **Agent Skill** for AI coding agents (Claude Code, Cursor, Codex, Antigravity, GitHub Copilot, Windsurf, OpenCode) and a ready-to-use playbook for software engineers.
