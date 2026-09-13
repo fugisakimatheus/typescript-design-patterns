@@ -1,7 +1,7 @@
 # TypeScript Skills
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![GitHub Release](https://img.shields.io/github/v/release/fugisakimatheus/typescript-skills?color=brightgreen)](https://github.com/fugisakimatheus/typescript-skills/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/fugisakimatheus/typescript-skills?display_name=tag&sort=semver&color=brightgreen)](https://github.com/fugisakimatheus/typescript-skills/releases)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-purple.svg)](https://agentskills.io)
 
 Open repository of **Agent Skills** for TypeScript development with AI coding agents (Claude Code, Cursor, Codex, Antigravity, GitHub Copilot, Windsurf, OpenCode) and software engineers.
