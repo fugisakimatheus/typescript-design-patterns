@@ -2,6 +2,10 @@
 name: typescript-design-patterns
 description: >-
   The 22 classic Gang of Four design patterns catalogued for TypeScript as ready-to-apply playbooks: intent, problem solved, participants, conceptual OOP example, and idiomatic TypeScript rewrites (discriminated unions, HOFs, generators, Record lookups). Includes trade-offs, how to recognize each pattern, and when NOT to apply them. Use when structuring new features, reviewing architecture, refactoring bloated classes/conditionals, designing extension points, or choosing between class hierarchies and union types. Triggers on: design pattern, GoF, Gang of Four, factory, abstract factory, builder, prototype, singleton, adapter, bridge, composite, decorator, facade, flyweight, proxy, chain of responsibility, command, iterator, mediator, memento, observer, state machine, strategy, template method, visitor, double dispatch, undo/redo, middleware pipeline, event emitter, anti-corruption layer, which pattern should I use.
+license: MIT
+metadata:
+  author: fugisakimatheus
+  version: "1.0.0"
 ---
 
 # TypeScript Design Patterns

@@ -1,0 +1,65 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Validate Skill Format & Structure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run validation script
+        run: npm run validate
+
+      - name: Verify skill directory & SKILL.md
+        run: |
+          SKILL_FILE="skills/typescript-design-patterns/SKILL.md"
+          if [ ! -f "$SKILL_FILE" ]; then
+            echo "❌ Error: $SKILL_FILE does not exist!"
+            exit 1
+          fi
+
+          if ! head -n 1 "$SKILL_FILE" | grep -q "^---"; then
+            echo "❌ Error: $SKILL_FILE must start with YAML frontmatter delimiter (---)"
+            exit 1
+          fi
+
+          if ! grep -q "^name: typescript-design-patterns" "$SKILL_FILE"; then
+            echo "❌ Error: $SKILL_FILE is missing required 'name: typescript-design-patterns' field in frontmatter"
+            exit 1
+          fi
+
+          if ! grep -q "^description:" "$SKILL_FILE"; then
+            echo "❌ Error: $SKILL_FILE is missing required 'description' field in frontmatter"
+            exit 1
+          fi
+
+          echo "✅ SKILL.md frontmatter validation passed."
+
+      - name: Verify references directory
+        run: |
+          REF_DIR="skills/typescript-design-patterns/references"
+          if [ ! -d "$REF_DIR" ]; then
+            echo "❌ Error: $REF_DIR does not exist!"
+            exit 1
+          fi
+
+          COUNT=$(find "$REF_DIR" -maxdepth 1 -name "*.md" | wc -l)
+          echo "Found $COUNT reference pattern files."
+          if [ "$COUNT" -lt 24 ]; then
+            echo "❌ Error: Expected at least 24 reference markdown files in $REF_DIR, found $COUNT"
+            exit 1
+          fi
+
+          echo "✅ References directory validation passed."

@@ -1,0 +1,36 @@
+{
+  "name": "typescript-skills",
+  "version": "1.0.0",
+  "description": "Collection of TypeScript skills for AI coding agents, featuring the typescript-design-patterns catalog",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node scripts/validate.mjs"
+  },
+  "keywords": [
+    "agent-skills",
+    "skills",
+    "ai-agents",
+    "typescript",
+    "typescript-skills",
+    "typescript-design-patterns",
+    "design-patterns",
+    "gof",
+    "gang-of-four",
+    "claude-code",
+    "cursor",
+    "antigravity",
+    "copilot",
+    "windsurf"
+  ],
+  "homepage": "https://github.com/fugisakimatheus/typescript-skills#readme",
+  "bugs": {
+    "url": "https://github.com/fugisakimatheus/typescript-skills/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fugisakimatheus/typescript-skills.git"
+  },
+  "license": "MIT",
+  "author": "Matheus Fugisaki"
+}
